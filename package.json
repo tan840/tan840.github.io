@@ -2,7 +2,7 @@
   "name": "threedportfolio",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://tan840.github.io/ThreeDPortfolio/",
+  "homepage": "https://tan840.github.io/",
   "scripts": {
   "dev": "vite",
   "build": "vite build",
