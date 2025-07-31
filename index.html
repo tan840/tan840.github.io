@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Tanvir Ahmed</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanvir Ahmed - VR & Game Developer Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .section {
+      scroll-margin-top: 80px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #3b82f6;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 20px;
+      bottom: -1.5rem;
+      width: 2px;
+      background-color: #e5e7eb;
+    }
+
+    .timeline-item:last-child::after {
+      display: none;
+    }
+
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .skill-badge {
+      display: inline-block;
+      padding: 0.375rem 0.75rem;
+      margin: 0.25rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .section-title {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      height: 3px;
+      background-color: #3b82f6;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="text-2xl font-bold text-blue-600">Tanvir Ahmed</div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">About</a>
+          <a href="#experience" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Experience</a>
+          <a href="#projects" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Projects</a>
+          <a href="#skills" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Skills</a>
+        </div>
+        <button class="md:hidden text-gray-700">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/3 mb-8 md:mb-0">
+          <div class="w-64 h-64 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl">
+            <img src="https://placehold.co/256x256/e2e8f0/64748b?text=TA" alt="Tanvir Ahmed" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="md:w-2/3 md:pl-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Tanvir Ahmed</h1>
+          <h2 class="text-2xl md:text-3xl text-blue-600 mb-6">VR & Game Developer</h2>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            Passionate VR and Game Developer with extensive experience in creating immersive experiences and hyper-casual games
+            with over 400 million downloads. Specialized in Unreal Engine, Blueprint, and rapid prototyping for mobile platforms.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="mailto:tan.ahmed98@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center">
+              <i class="fas fa-envelope mr-2"></i> Contact Me
+            </a>
+            <a href="https://www.linkedin.com/in/tan840/" target="_blank" class="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition-colors duration-300 flex items-center">
+              <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-3xl font-bold text-gray-800 mb-12">About Me</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            I'm a passionate VR and Game Developer with over 3 years of experience in creating engaging digital experiences.
+            My journey in game development began with hyper-casual mobile games, where I contributed to titles with over
+            400 million downloads combined. Currently, I'm focused on creating immersive VR experiences using Unreal Engine
+            and optimizing for Meta Quest platforms.
+          </p>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            I specialize in rapid prototyping, game mechanics development, and creating interactive assets that bring
+            virtual worlds to life. My approach combines technical expertise with creative problem-solving to deliver
+            high-quality gaming experiences.
+          </p>
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Personal Information</h3>
+            <div class="grid grid-cols-2 gap-4 text-gray-600">
+              <div><span class="font-medium">Date of Birth:</span> December 31, 1994</div>
+              <div><span class="font-medium">Nationality:</span> Bangladeshi</div>
+              <div><span class="font-medium">Location:</span> Dhaka, Bangladesh</div>
+              <div><span class="font-medium">Email:</span> tan.ahmed98@gmail.com</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 p-8 rounded-xl">
+          <h3 class="text-xl font-semibold text-gray-800 mb-6">Education</h3>
+          <div class="space-y-6">
+            <div>
+              <h4 class="font-semibold text-lg text-gray-800">B.Sc. in Computer Science and Engineering</h4>
+              <p class="text-blue-600 font-medium">Independent University, Bangladesh</p>
+              <p class="text-gray-500">2016 - 2020</p>
+              <p class="mt-2 text-gray-600">Comprehensive education in computer science fundamentals, software development, and engineering principles.</p>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-4">Languages</h3>
+          <div class="space-y-3">
+            <div class="flex justify-between">
+              <span>Bengali (Native)</span>
+              <span class="text-blue-600">C2</span>
+            </div>
+            <div class="flex justify-between">
+              <span>English</span>
+              <span class="text-blue-600">C1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-3xl font-bold text-gray-800 mb-12">Work Experience</h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="timeline-item">
+          <h3 class="text-xl font-bold text-gray-800">VR Developer</h3>
+          <p class="text-lg text-blue-600 font-medium">VinactsBD • Dhaka, Bangladesh</p>
+          <p class="text-gray-500 mb-3">February 2024 - Present</p>
+          <ul class="list-disc list-inside text-gray-600 space-y-1">
+            <li>Creating features using Blueprint in Unreal Engine</li>
+            <li>Assembling interactive assets for VR experiences</li>
+            <li>Optimizing VR applications for Meta Quest 2 platform</li>
+            <li>Developing 3D visualizations for client projects</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3 class="text-xl font-bold text-gray-800">Game Developer</h3>
+          <p class="text-lg text-blue-600 font-medium">Hamba Games • Dhaka, Bangladesh</p>
+          <p class="text-gray-500 mb-3">November 2022 - November 2023</p>
+          <ul class="list-disc list-inside text-gray-600 space-y-1">
+            <li>Contributed to game ideation and concept development</li>
+            <li>Managed game development projects from concept to release</li>
+            <li>Developed game features for hyper-casual mobile games</li>
+            <li>Created creative advertisements for game promotions</li>
+            <li>Published a game with over 1 million downloads</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3 class="text-xl font-bold text-gray-800">Game Developer</h3>
+          <p class="text-lg text-blue-600 font-medium">Deven Studio • Bengaluru, India</p>
+          <p class="text-gray-500 mb-3">June 2021 - October 2022</p>
+          <ul class="list-disc list-inside text-gray-600 space-y-1">
+            <li>Performed rapid prototyping of game concepts</li>
+            <li>Programmed core gameplay mechanics for hyper-casual games</li>
+            <li>Integrated art assets and UI elements into games</li>
+            <li>Developed and maintained the company's tech stack</li>
+            <li>Published a game with over 10 million downloads</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-3xl font-bold text-gray-800 mb-12">Featured Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+            <img src="https://placehold.co/400x225/3b82f6/ffffff?text=VR+Experience" alt="VR Project" class="w-full h-48 object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Immersive VR Training</h3>
+            <p class="text-gray-600 mb-4">A VR training application developed for enterprise clients using Unreal Engine, featuring interactive scenarios and realistic physics.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-blue-600 font-medium">Unreal Engine, Blueprint</span>
+              <a href="#" class="text-blue-600 hover:text-blue-800">
+                <i class="fas fa-play-circle text-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+            <img src="https://placehold.co/400x225/059669/ffffff?text=Hyper-casual+Game" alt="Mobile Game" class="w-full h-48 object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Puzzle Rush</h3>
+            <p class="text-gray-600 mb-4">A hyper-casual puzzle game with simple mechanics and addictive gameplay that reached over 1 million downloads.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-blue-600 font-medium">Unity, C#</span>
+              <a href="#" class="text-blue-600 hover:text-blue-800">
+                <i class="fas fa-play-circle text-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+            <img src="https://placehold.co/400x225/dc2626/ffffff?text=3D+Visualization" alt="3D Visualization" class="w-full h-48 object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Architectural VR</h3>
+            <p class="text-gray-600 mb-4">Interactive 3D visualization of architectural designs for client presentations and walkthroughs.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-blue-600 font-medium">Unreal Engine, Meta Quest</span>
+              <a href="#" class="text-blue-600 hover:text-blue-800">
+                <i class="fas fa-play-circle text-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+            <img src="https://placehold.co/400x225/7c3aed/ffffff?text=Mobile+Game" alt="Mobile Game" class="w-full h-48 object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Color Switch Challenge</h3>
+            <p class="text-gray-600 mb-4">A fast-paced hyper-casual game with over 10 million downloads, featuring color-matching mechanics.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-blue-600 font-medium">Unity, C#</span>
+              <a href="#" class="text-blue-600 hover:text-blue-800">
+                <i class="fas fa-play-circle text-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+            <img src="https://placehold.co/400x225/ea580c/ffffff?text=VR+Interaction" alt="VR Interaction" class="w-full h-48 object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Interactive VR Demo</h3>
+            <p class="text-gray-600 mb-4">A demonstration of interactive VR elements and physics-based interactions for client presentations.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-blue-600 font-medium">Unreal Engine, Blueprint</span>
+              <a href="#" class="text-blue-600 hover:text-blue-800">
+                <i class="fas fa-play-circle text-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+            <img src="https://placehold.co/400x225/0891b2/ffffff?text=Game+Prototype" alt="Game Prototype" class="w-full h-48 object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Rapid Prototype Collection</h3>
+            <p class="text-gray-600 mb-4">A collection of rapid prototypes developed for game concept validation and pitch presentations.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-blue-600 font-medium">Unity, C#</span>
+              <a href="#" class="text-blue-600 hover:text-blue-800">
+                <i class="fas fa-play-circle text-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-3xl font-bold text-gray-800 mb-12">Skills & Expertise</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-6">Technical Skills</h3>
+          <div class="space-y-6">
+            <div>
+              <h4 class="text-lg font-medium text-gray-800 mb-3">Programming Languages</h4>
+              <div class="flex flex-wrap">
+                <span class="skill-badge bg-blue-100 text-blue-800">C#</span>
+                <span class="skill-badge bg-blue-100 text-blue-800">Python</span>
+                <span class="skill-badge bg-blue-100 text-blue-800">C++</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium text-gray-800 mb-3">Game Development</h4>
+              <div class="flex flex-wrap">
+                <span class="skill-badge bg-green-100 text-green-800">Unreal Engine</span>
+                <span class="skill-badge bg-green-100 text-green-800">Blueprint</span>
+                <span class="skill-badge bg-green-100 text-green-800">Unity</span>
+                <span class="skill-badge bg-green-100 text-green-800">VR Development</span>
+                <span class="skill-badge bg-green-100 text-green-800">Meta Quest</span>
+                <span class="skill-badge bg-green-100 text-green-800">Rapid Prototyping</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium text-gray-800 mb-3">Web Technologies</h4>
+              <div class="flex flex-wrap">
+                <span class="skill-badge bg-purple-100 text-purple-800">React</span>
+                <span class="skill-badge bg-purple-100 text-purple-800">Three.js</span>
+                <span class="skill-badge bg-purple-100 text-purple-800">React Three Fiber</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-6">Professional Skills</h3>
+          <div class="space-y-6">
+            <div>
+              <h4 class="text-lg font-medium text-gray-800 mb-3">Game Development</h4>
+              <ul class="text-gray-600 space-y-2">
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                  Game Design & Ideation
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                  Core Gameplay Programming
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                  UI/UX Integration
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                  Asset Integration
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium text-gray-800 mb-3">Project Management</h4>
+              <ul class="text-gray-600 space-y-2">
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                  Project Planning & Execution
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                  Team Collaboration
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                  Agile Development
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                  Version Control (Git, Sourcetree)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Let's Work Together</h2>
+      <p class="text-xl text-gray-600 mb-8">I'm currently available for freelance projects and full-time opportunities. Let's create something amazing together!</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-6">
+        <a href="mailto:tan.ahmed98@gmail.com" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-lg font-medium flex items-center justify-center">
+          <i class="fas fa-envelope mr-3"></i> Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/tan840/" target="_blank" class="bg-gray-800 text-white px-8 py-4 rounded-lg hover:bg-gray-900 transition-colors duration-300 text-lg font-medium flex items-center justify-center">
+          <i class="fab fa-linkedin-in mr-3"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <p class="text-lg font-semibold">Tanvir Ahmed</p>
+          <p class="text-gray-400">VR & Game Developer</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="mailto:tan.ahmed98@gmail.com" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <i class="fas fa-envelope text-xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/tan840/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+          <a href="tel:+8801613311184" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <i class="fas fa-phone text-xl"></i>
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+        <p class="text-gray-400">© 2025 Tanvir Ahmed. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    // Simple animation for project cards on scroll
+    const projectCards = document.querySelectorAll('.project-card');
+    const observerOptions = {
+      threshold: 0.1
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+    projectCards.forEach(card => {
+      card.style.opacity = 0;
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(card);
+    });
+  </script>
+</body>
+
+</html>
+```
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
